@@ -1,6 +1,6 @@
 import facebook
 
-graph = facebook.GraphAPI(access_token='EAACEdEose0cBAB5jmkEZAB8CKzFlrLSfTJcot1JMhzkOgRgYgvgJrr22vzNxLqVYZAgV3QR149ZA9nXsl6ap8chrcZCQE0Od5qZBdUwvnMD6ZC9RDXKkVg0ZAUH5qwIoD6BfuyxSdez2x6kWEYrAIV9fhNUJLxvFFbQLHmMgOdATV23criYsnRr4DyNfZAwJs9IZD', version='2.8')
+graph = facebook.GraphAPI(access_token='your-access-token', version='2.8')
 
 #friends = graph.get_all_connections(id='me', connection_name='posts')
 posts = graph.get_all_connections(id='me', connection_name='posts')
@@ -32,10 +32,3 @@ final = final[:10]
 
 for person, count in final:
     print person, count
-#for post in post_objects:
-#    post_reactions = graph.get_all_connections(id=post['id'], connection_name="reactions")
-
-#posts_actual = posts['data']
-#print sum(1 for _ in posts_actual)
-#post = graph.get_object(id='603417164_10155134270072165')
-#print(post['message'])
